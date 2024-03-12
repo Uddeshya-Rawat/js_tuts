@@ -1,2 +1,2 @@
 # js_tuts
-I have made my own js  notes 
+I have made my own js notes
