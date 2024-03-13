@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>title</title>
+</head>
+<body>
+    <h1>Hello there</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+   
+</body>
+<script>
+    // timeInterval is also a method which take a callback function as parameter and runs that function continously after the time interval given as parameter
+   
+
+    // project using these start stop button start printing hello function and stop hello function 
+    let start=document.querySelector("#start");
+    let end=document.querySelector("#stop");
+    let hello=function(){
+        console.log("uddeshya",Date.now());
+    }
+    let interval;
+
+
+    start.addEventListener("click",(e)=>{
+        console.log("printing started");
+        interval=setInterval(hello,1000);
+    })
+    end.addEventListener("click",(e)=>{
+        console.log("printing stopped");
+        clearInterval(interval);
+        interval=null;
+    })
+</script>
+</html>

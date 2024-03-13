@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EVENTS</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+    
+   
+</body>
+<script>
+   /* document.getElementById("images").onclick=()=>{  // this  method is old and has some problems so its better to use event listener
+        alert("photo clicked")
+    }*/
+
+
+/* document.getElementById("images").addEventListener('click',(e)=>{
+    console.log("photo was clicked inside ul");
+ })
+ document.getElementById("owl").addEventListener('click',(e)=>{
+    console.log("owl photo clicked");
+    e.stopPropagation(); // after using this there will be no bubbling propogation.
+ }) */
+
+ // in this case if we click owl image in webpage then first "owl photo clicked " will get printed and "then photo was clicked inside ul"
+ // this is called event bubbling as we are going from inside to outside node.
+// there is another event called capturing which goes parent node to child node. this can be done is write true after call back function.
+// this is called propogation of event both bubbling and capturing are propogation of event.
+
+//..............on click remove the images from htlm page.................//
+
+let images=document.querySelector("#images");
+images.addEventListener("click",(e)=>{
+
+   if(e.target.tagName==="IMG"){
+   let removeNode=e.target.parentNode; // this helps to select whole li element
+   removeNode.remove();}  // remove method helps to remove the node
+})// problem with this is when we click in image this will work but if we click on li node the whole ul will get removed to solve this problem
+//wrap whole remove in if else statement 
+
+
+
+</script> 
+</html>

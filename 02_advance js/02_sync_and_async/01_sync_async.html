@@ -1,0 +1,40 @@
+<!---  Javascript is a single thread leanguage that means it run on a single thread unlike many other languages. This means that javscript code runs in synchronous way or line by line .
+In execution context each line is run one by one .Each operation waits for last operation to get executed .
+
+BLOCKING CODE:- blocking code blocks the flow of execution until the work is done.
+               ex- reading a file and getting data from it for further use in program.
+
+NON BLOCKING CODE:- it doesnt break the flow of execution.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>title</title>
+</head>
+<body>
+  <h1>hello there we are using html</h1>
+  <button id="stop">STOP</button>
+   
+</body>
+<script>
+  /* setTimeout is a method which is given by browser and is part is api call etc . it is not a method of javascript
+    setTimeout takes paramters as callback function and time */
+   let h1= document.querySelector("h1");
+   let replace=function(){
+    h1.innerHTML="my name is uddeshya";
+   }
+   let stop=setTimeout(replace,3000);// 3000 is time in millli seconds and we have given reference of the function 
+
+   // we can also stop this setTimeout using clearTimeout. This method also takes the the reference of setTimeout
+   // using stop button stop the setTimeout of replace.
+
+   let button=document.querySelector("button");
+   button.addEventListener("click",(e)=>{
+    clearTimeout(stop);
+    console.log("STOPPED");
+   })
+
+</script>
+</html>

@@ -1,25 +1,25 @@
 
 
-  As we know we can create webpage using HMTL/CSS as html helps us to make the structure of a webpage and css helps to add the 
-  styles in the webpage . Through javascript we add the logic to the webpage for example if we press a button then what should happen 
-  to the webpage .... . JS helps to add the logic . To link a js file in html we simply write..
+/*As we know we can create webpage using HMTL/CSS as html helps us to make the structure of a webpage and css helps to add the 
+styles in the webpage . Through javascript we add the logic to the webpage for example if we press a button then what should happen 
+to the webpage .... . JS helps to add the logic . To link a js file in html we simply write..
 
-  <script src="file_name.js"></script>
+<script src="file_name.js"></script>
 
-  We can add multiple JS file in our html code .
-  we should always write this code before end of body tag as if we write in head tag it will mean we to apply script code first before html code 
-  and we will have null value in objects.
+We can add multiple JS file in our html code .
+we should always write this code before end of body tag as if we write in head tag it will mean we to apply script code first before html code 
+and we will have null value in objects.
 
 
- ................... WINDOW OBJECT ................................ 
-   
+................... WINDOW OBJECT ................................ 
+ 
 It is a global object with lots of properties and methods.It is automatically created by browser and is browser's object . 
 
 for example:-
 
 if we write window.console.log("hello"); it will not show a error as console is part of window object .
-            window.alert("hello2"); alert is also a part of window object . it doesnt matter whether we write window or not 
-            js already know the meaning of it .Our whole  html code is saved in window object as a object.
+          window.alert("hello2"); alert is also a part of window object . it doesnt matter whether we write window or not 
+          js already know the meaning of it .Our whole  html code is saved in window object as a object.
 
 
 
@@ -51,13 +51,13 @@ DOM helps us to manipulate the HTML code by various methods.
 ...........................Accessing the elements...........
 
 1.   document.getElementById("id_name");  :- As we know we can give our elements unique id . Through this id we can also access them in javascript
-                                             using the given syntax. 
-                                             It returns the value so it can be stored in a variable.It returns null value if there is no id exists with id given.
+                                           using the given syntax. 
+                                           It returns the value so it can be stored in a variable.It returns null value if there is no id exists with id given.
 
 2.   document.getElementsByClass("class_name");  :- We can access our Elements by class name to . through this we can access multiple elemnts at the same time.
-                                                    It returns the html collection . html collection is a structure which is similar to an array and it returns 
-                                                    html structure of 0 length if there no such class exsists with the class name provided.
-                                               
+                                                  It returns the html collection . html collection is a structure which is similar to an array and it returns 
+                                                  html structure of 0 length if there no such class exsists with the class name provided.
+                                             
 3.  document.getElementsByTagName("tag_name");   :- In this we access our elements using tag name and manipulate the hmtl elements.
 
 
@@ -70,7 +70,7 @@ we use it too for accessing the elements of html
 1.  document.querySelector("tag/.class_name/#id_name");  :- using this we can access the elements the of the html. It returns the 1st element.
 
 2.  document.querySelectorAll("tag/.class_name/#id_name"); :- Through this we can access all elements with same tag/class . It returns the nodelist i.e list of nodes.It has some prototype .
-                                              
+                                            
 
 
 .........................Properties...................
